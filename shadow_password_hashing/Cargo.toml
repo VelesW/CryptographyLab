@@ -1,0 +1,19 @@
+[package]
+name = "shadow_password_hashing"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+clap = { version = "4.5.60", features = ["derive"] }
+rayon = "1.11.0"
+sha-crypt = "0.5.0"
+sha2 = "0.10.9"
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "crack_shadow"
+path = "src/main.rs"
